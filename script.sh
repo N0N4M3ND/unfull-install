@@ -5,7 +5,7 @@ mkfs.ext4 /dev/sda3 &&
 mount /dev/sda3 /mnt &&
 swapon /dev/sda2 &&
 mount --mkdir /dev/sda1 /mnt/boot/efi &&
-pacstrap /mnt alacritty amd-ucode base base-devel efibootmgr git grub htop intel-ucode jdk-openjdk linux linux-firmware linux-headers nano net-tools networkmanager openssh unzip vim zip &&
+pacstrap /mnt amd-ucode base base-devel efibootmgr git grub htop intel-ucode jdk-openjdk linux linux-firmware linux-headers nano net-tools networkmanager openssh unzip vim zip &&
 genfstab -U /mnt > /mnt/etc/fstab &&
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Tbilisi /etc/localtime &&
 arch-chroot /mnt sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen &&
